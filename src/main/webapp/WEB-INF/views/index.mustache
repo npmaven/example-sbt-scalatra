@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script type="text/javascript" src="/org/npmaven/jquery/dist/jquery.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+
+      body {
+        font-family: Helvetica, Arial;
+        color: #555;
+        text-align: center;
+        margin: 0;
+        padding-top: 3em;
+      }
+
+      .clickable, a {
+        color: #080;
+        text-decoration: none
+      }
+
+      .clickable:hover, a:hover {
+        cursor: pointer;
+        color: #088;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello stranger. <span id="toggle" class="clickable">Click me, please.</span></h1>
+    <h2 class="hidden">I was toggled by jQuery brought to you by <a href="http://npmaven.org" target="_blank">npmaven</a>! Woohoo!</h2>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var $target = $('.hidden');
+        $('#toggle').on('click', function () {
+          $target.toggle();
+        });
+      });
+    </script>
+
+  </body>
+</html>
